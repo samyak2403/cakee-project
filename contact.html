@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CREAMY WORLD</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CREAMY WORLD</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pan.html">Pan Cake</a></li>
+            <li><a href="pest.html">Pastries</a></li>
+            <li><a href="birth.html">Birthday Cake</a></li>
+            <li><a href="wedd.html">Wedding Cake</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+            <li><a href="feed.html">Feedback</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="login.html" style="color: #333; margin-right: 15px;"><i class="fas fa-user"></i></a>
+            <a href="order.html" style="color: #333;"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+
+    <div class="contact-hero">
+        <div class="contact-overlay">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you! Whether you have a question about our cakes, need help with an order, or want to provide feedback, we're here to help.</p>
+        </div>
+    </div>
+
+    <div class="container contact">
+        <div class="image-section">
+            <img src="img/cake.jpeg" alt="Contact Us">
+            <div class="contact-info-overlay">
+                <h3>Visit Our Shop</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Plot No:23 Peth Road, Karad</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> creamy@gmail.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <p class="contact-intro">Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form id="contactForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+            
+            <div class="thank-you-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your message has been sent successfully. We'll get back to you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-section">
+        <h2>Find Us</h2>
+        <div class="map-container">
+            <iframe src="" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="home.html" class="footer-item">
+            <i class="fas fa-home"></i>
+            <div>Home</div>
+        </a>
+        <div class="footer-item" id="search-toggle">
+            <i class="fas fa-search"></i>
+            <div>Search</div>
+        </div>
+        <a href="order.html" class="footer-item">
+            <i class="fas fa-shopping-cart"></i>
+            <div>Cart</div>
+            <span class="dot cart-count">0</span>
+        </a>
+        <a href="login.html" class="footer-item">
+            <i class="fas fa-user"></i>
+            <div>Profile</div>
+        </a>
+    </footer>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" style="display: none;">
+        <div class="search-container">
+            <div class="search-header">
+                <h3>Search Products</h3>
+                <button class="close-search"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for cakes, pastries...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-results">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/cake.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-overlay {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .contact-overlay h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .contact-overlay p {
+            font-size: 18px;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .container.contact {
+            display: flex;
+            background: white;
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .image-section {
+            flex: 1;
+            position: relative;
+            min-height: 500px;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .contact-info-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 30px;
+        }
+        
+        .contact-info-overlay h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .contact-info-overlay p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info-overlay i {
+            margin-right: 10px;
+            color: #ff007f;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            background: #ff007f;
+        }
+        
+        .form-section {
+            flex: 1;
+            padding: 50px;
+        }
+        
+        .form-section h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #333;
+        }
+        
+        .contact-intro {
+            color: #777;
+            margin-bottom: 30px;
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .input-group label i {
+            color: #ff007f;
+            margin-right: 5px;
+        }
+        
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #ff007f;
+            box-shadow: 0 0 8px rgba(255, 0, 127, 0.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #ff007f, #ff5e98);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(255, 0, 127, 0.3);
+        }
+        
+        .thank-you-message {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .thank-you-message i {
+            font-size: 60px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-message h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .map-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .map-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .map-section h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 25%;
+            background: linear-gradient(45deg, #ff007f, #ff5e98);
+            border-radius: 10px;
+        }
+        
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .container.contact {
+                flex-direction: column;
+            }
+            
+            .image-section {
+                min-height: 300px;
+            }
+            
+            .form-section {
+                padding: 30px 20px;
+            }
+            
+            .input-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        /* Search overlay styles */
+        .search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .search-container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .search-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-header h3 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .close-search {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+        }
+        
+        .search-box button {
+            background: #ff007f;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+        
+        .search-results {
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .search-result-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .search-result-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .result-details {
+            flex: 1;
+        }
+        
+        .result-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+        
+        .result-details p {
+            margin: 0;
+            color: #ff007f;
+            font-weight: bold;
+        }
+        
+        .result-details small {
+            color: #777;
+            font-size: 12px;
+        }
+        
+        .add-to-cart-btn {
+            background: #f0f0f0;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart-btn:hover {
+            background: #ff007f;
+            color: white;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #777;
+            padding: 20px 0;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            const thankYouMessage = document.querySelector('.thank-you-message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real-world scenario, you would submit the form data to a server here
+                    // For demo purposes, just show the thank you message
+                    contactForm.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                });
+            }
+            
+            // Check cart count from localStorage
+            let cartCount = localStorage.getItem('cartCount') || 0;
+            updateCartCount(cartCount);
+            
+            // Search functionality
+            const searchToggle = document.getElementById('search-toggle');
+            const searchOverlay = document.querySelector('.search-overlay');
+            const closeSearch = document.querySelector('.close-search');
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const searchResults = document.querySelector('.search-results');
+            
+            searchToggle.addEventListener('click', function() {
+                searchOverlay.style.display = 'flex';
+                searchInput.focus();
+            });
+            
+            closeSearch.addEventListener('click', function() {
+                searchOverlay.style.display = 'none';
+            });
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // Get all cakes from different pages
+            function performSearch() {
+                const query = searchInput.value.toLowerCase().trim();
+                
+                if (!query) return;
+                
+                // Sample cake data - in a real application this would be fetched from a database
+                const cakeProducts = [
+                    { title: "Chocolate Symphony Cake", price: "$42.99", image: "img/cake1.jpg", category: "Birthday Cakes" },
+                    { title: "Strawberry Shortcake", price: "$38.99", image: "img/cake2.jpg", category: "Birthday Cakes" },
+                    { title: "Blueberry Cheesecake", price: "$44.99", image: "img/cake3.jpg", category: "Wedding Cakes" },
+                    { title: "Classic Vanilla Cake", price: "$32.99", image: "img/cake4.jpg", category: "Wedding Cakes" },
+                    { title: "Red Velvet Delight", price: "$39.99", image: "img/cake5.jpg", category: "Birthday Cakes" },
+                    { title: "Tiramisu Cake", price: "$45.99", image: "img/cake6.jpg", category: "Pastries" },
+                    { title: "Fruit Paradise Cake", price: "$48.99", image: "img/cake7.jpg", category: "Wedding Cakes" },
+                    { title: "Butterscotch Cake", price: "$36.99", image: "img/cake8.jpg", category: "Birthday Cakes" }
+                ];
+                
+                const results = cakeProducts.filter(product => 
+                    product.title.toLowerCase().includes(query) || 
+                    product.category.toLowerCase().includes(query)
+                );
+                
+                displaySearchResults(results);
+            }
+            
+            function displaySearchResults(results) {
+                searchResults.innerHTML = '';
+                
+                if (results.length === 0) {
+                    searchResults.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
+                    return;
+                }
+                
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'search-result-item';
+                    
+                    resultItem.innerHTML = `
+                        <img src="${result.image}" alt="${result.title}">
+                        <div class="result-details">
+                            <h4>${result.title}</h4>
+                            <p>${result.price}</p>
+                            <small>${result.category}</small>
+                        </div>
+                        <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                    `;
+                    
+                    searchResults.appendChild(resultItem);
+                });
+                
+                // Add click event for search results
+                const addButtons = document.querySelectorAll('.add-to-cart-btn');
+                addButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const resultItem = this.closest('.search-result-item');
+                        const title = resultItem.querySelector('h4').textContent;
+                        const price = resultItem.querySelector('p').textContent;
+                        const image = resultItem.querySelector('img').src;
+                        
+                        const cartItem = {
+                            id: Date.now(),
+                            title: title,
+                            price: price,
+                            image: image,
+                            quantity: 1
+                        };
+                        
+                        addToCart(cartItem);
+                        
+                        // Feedback
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-cart-plus"></i>';
+                        }, 1500);
+                    });
+                });
+            }
+            
+            function addToCart(item) {
+                // Get existing cart
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                // Check if item already in cart
+                const existingItem = cart.find(i => i.title === item.title);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push(item);
+                }
+                
+                // Save to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // Update cart count
+                cartCount = Number(cartCount) + 1;
+                localStorage.setItem('cartCount', cartCount);
+                updateCartCount(cartCount);
+            }
+            
+            function updateCartCount(count) {
+                const cartCountElements = document.querySelectorAll('.cart-count');
+                cartCountElements.forEach(el => {
+                    el.textContent = count;
+                    if (count > 0) {
+                        el.style.display = 'block';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

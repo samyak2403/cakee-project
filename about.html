@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CREAMY WORLD</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CREAMY WORLD</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="pan.html">Pan Cake</a></li>
+            <li><a href="pest.html">Pastries</a></li>
+            <li><a href="birth.html">Birthday Cake</a></li>
+            <li><a href="wedd.html">Wedding Cake</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="feed.html">Feedback</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="login.html" style="color: #333; margin-right: 15px;"><i class="fas fa-user"></i></a>
+            <a href="order.html" style="color: #333;"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="overlay">
+            <h1>About Us</h1>
+            <p>WELCOME to Creamy World of cake!!! We are passionate about creating delicious, high-quality cakes that bring joy to every occasion.</p>
+            <p>From birthdays and weddings to anniversaries and special moments, our handcrafted cakes are made with love, the finest ingredients, and a touch of creativity...</p>
+            
+            <div class="about-features">
+                <div class="about-feature">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Premium Ingredients</h3>
+                    <p>We use only the finest ingredients sourced from trusted suppliers to ensure exceptional taste in every bite.</p>
+                </div>
+                <div class="about-feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>Made with Love</h3>
+                    <p>Each cake is carefully handcrafted with attention to detail and passion for baking.</p>
+                </div>
+                <div class="about-feature">
+                    <i class="fas fa-truck"></i>
+                    <h3>Timely Delivery</h3>
+                    <p>We ensure your cake arrives fresh and on time for your special occasion.</p>
+                </div>
+            </div>
+            
+            <div class="shop-hours">
+                <h3><i class="far fa-clock"></i> Shop Timing:</h3>
+                <p>Monday-Friday: 8am to 11pm</p>
+                <p>Saturday-Sunday: 8am to 7pm</p>
+            </div>
+            
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <section class="our-story">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="img/cake.jpeg" alt="Our bakery">
+                </div>
+                <div class="story-text">
+                    <p>Creamy World was founded in 2010 with a simple mission - to create cakes that not only look amazing but taste incredible too. What started as a small home-based bakery has now grown into a beloved cake shop serving thousands of happy customers.</p>
+                    <p>Our team of expert bakers and decorators bring years of experience and passion to every creation. We believe that every celebration deserves a cake that's as special as the occasion itself.</p>
+                    <p>Over the years, we've perfected our recipes and techniques to ensure that each cake that leaves our kitchen meets our high standards of quality and taste. We're constantly innovating and experimenting with new flavors and designs to keep our offerings fresh and exciting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+               
+                <div class="team-member spotlight">
+                    <div class="member-photo">
+                        <img src="https://avatars.githubusercontent.com/u/126759819?v=4" alt="Samyak2403">
+                    </div>
+                    <h3>Samyak2403</h3>
+                    <p class="role">Lead Developer</p>
+                    <p>With 5+ years of Android development expertise and Kotlin mastery, Samyak has developed 200+ applications and built our complete website.</p>
+                    <div class="dev-badges">
+                        <span class="badge android">Android</span>
+                        <span class="badge kotlin">Kotlin</span>
+                        <span class="badge web">Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2>Ready to Order Your Special Cake?</h2>
+            <p>Whether it's a birthday, wedding, or any special occasion, we've got the perfect cake for you!</p>
+            <a href="index.html" class="btn">View Our Collection</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="home.html" class="footer-item">
+            <i class="fas fa-home"></i>
+            <div>Home</div>
+        </a>
+        <div class="footer-item" id="search-toggle">
+            <i class="fas fa-search"></i>
+            <div>Search</div>
+        </div>
+        <a href="order.html" class="footer-item">
+            <i class="fas fa-shopping-cart"></i>
+            <div>Cart</div>
+            <span class="dot cart-count">0</span>
+        </a>
+        <a href="login.html" class="footer-item">
+            <i class="fas fa-user"></i>
+            <div>Profile</div>
+        </a>
+    </footer>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" style="display: none;">
+        <div class="search-container">
+            <div class="search-header">
+                <h3>Search Products</h3>
+                <button class="close-search"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for cakes, pastries...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-results">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .about-feature {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+        
+        .about-feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .about-feature i {
+            font-size: 40px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+        
+        .about-feature h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .shop-hours {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            display: inline-block;
+        }
+        
+        .shop-hours h3 {
+            margin-bottom: 10px;
+        }
+        
+        .shop-hours i {
+            margin-right: 8px;
+        }
+        
+        .our-story {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .our-story h2, .our-team h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .our-story h2::after, .our-team h2::after, .cta-section h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 25%;
+            background: linear-gradient(45deg, #ff007f, #ff5e98);
+            border-radius: 10px;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .story-image {
+            flex: 1;
+        }
+        
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-text {
+            flex: 1;
+        }
+        
+        .story-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .our-team {
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+            padding-bottom: 20px;
+            width: 300px;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member-photo {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .team-member:hover .member-photo img {
+            transform: scale(1.1);
+        }
+        
+        .team-member h3 {
+            margin: 20px 0 5px;
+        }
+        
+        .role {
+            color: #ff007f;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .team-member p {
+            padding: 0 20px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(45deg, #ff007f, #ff5e98);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #ff007f;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-section .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .about-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .team-grid {
+                gap: 20px;
+            }
+            
+            .team-member {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Search overlay styles */
+        .search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .search-container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .search-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-header h3 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .close-search {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+        }
+        
+        .search-box button {
+            background: #ff007f;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+        
+        .search-results {
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .search-result-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .search-result-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .result-details {
+            flex: 1;
+        }
+        
+        .result-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+        
+        .result-details p {
+            margin: 0;
+            color: #ff007f;
+            font-weight: bold;
+        }
+        
+        .result-details small {
+            color: #777;
+            font-size: 12px;
+        }
+        
+        .add-to-cart-btn {
+            background: #f0f0f0;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart-btn:hover {
+            background: #ff007f;
+            color: white;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #777;
+            padding: 20px 0;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .team-member.spotlight {
+            border: 2px solid #ff007f;
+            transform: translateY(-10px);
+        }
+        
+        .dev-badges {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .badge.android {
+            background: #3ddc84;
+        }
+        
+        .badge.kotlin {
+            background: #7F52FF;
+        }
+        
+        .badge.web {
+            background: #61DAFB;
+        }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Check cart count from localStorage
+        let cartCount = localStorage.getItem('cartCount') || 0;
+        updateCartCount(cartCount);
+        
+        // Search functionality
+        const searchToggle = document.getElementById('search-toggle');
+        const searchOverlay = document.querySelector('.search-overlay');
+        const closeSearch = document.querySelector('.close-search');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.querySelector('.search-results');
+        
+        searchToggle.addEventListener('click', function() {
+            searchOverlay.style.display = 'flex';
+            searchInput.focus();
+        });
+        
+        closeSearch.addEventListener('click', function() {
+            searchOverlay.style.display = 'none';
+        });
+        
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // Get all cakes from different pages
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            
+            if (!query) return;
+            
+            // Sample cake data - in a real application this would be fetched from a database
+            const cakeProducts = [
+                { title: "Chocolate Symphony Cake", price: "$42.99", image: "img/cake1.jpg", category: "Birthday Cakes" },
+                { title: "Strawberry Shortcake", price: "$38.99", image: "img/cake2.jpg", category: "Birthday Cakes" },
+                { title: "Blueberry Cheesecake", price: "$44.99", image: "img/cake3.jpg", category: "Wedding Cakes" },
+                { title: "Classic Vanilla Cake", price: "$32.99", image: "img/cake4.jpg", category: "Wedding Cakes" },
+                { title: "Red Velvet Delight", price: "$39.99", image: "img/cake5.jpg", category: "Birthday Cakes" },
+                { title: "Tiramisu Cake", price: "$45.99", image: "img/cake6.jpg", category: "Pastries" },
+                { title: "Fruit Paradise Cake", price: "$48.99", image: "img/cake7.jpg", category: "Wedding Cakes" },
+                { title: "Butterscotch Cake", price: "$36.99", image: "img/cake8.jpg", category: "Birthday Cakes" }
+            ];
+            
+            const results = cakeProducts.filter(product => 
+                product.title.toLowerCase().includes(query) || 
+                product.category.toLowerCase().includes(query)
+            );
+            
+            displaySearchResults(results);
+        }
+        
+        function displaySearchResults(results) {
+            searchResults.innerHTML = '';
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
+                return;
+            }
+            
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                
+                resultItem.innerHTML = `
+                    <img src="${result.image}" alt="${result.title}">
+                    <div class="result-details">
+                        <h4>${result.title}</h4>
+                        <p>${result.price}</p>
+                        <small>${result.category}</small>
+                    </div>
+                    <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+                `;
+                
+                searchResults.appendChild(resultItem);
+            });
+            
+            // Add click event for search results
+            const addButtons = document.querySelectorAll('.add-to-cart-btn');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const resultItem = this.closest('.search-result-item');
+                    const title = resultItem.querySelector('h4').textContent;
+                    const price = resultItem.querySelector('p').textContent;
+                    const image = resultItem.querySelector('img').src;
+                    
+                    const cartItem = {
+                        id: Date.now(),
+                        title: title,
+                        price: price,
+                        image: image,
+                        quantity: 1
+                    };
+                    
+                    addToCart(cartItem);
+                    
+                    // Feedback
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-cart-plus"></i>';
+                    }, 1500);
+                });
+            });
+        }
+        
+        function addToCart(item) {
+            // Get existing cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Check if item already in cart
+            const existingItem = cart.find(i => i.title === item.title);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(item);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Update cart count
+            cartCount = Number(cartCount) + 1;
+            localStorage.setItem('cartCount', cartCount);
+            updateCartCount(cartCount);
+        }
+        
+        function updateCartCount(count) {
+            const cartCountElements = document.querySelectorAll('.cart-count');
+            cartCountElements.forEach(el => {
+                el.textContent = count;
+                if (count > 0) {
+                    el.style.display = 'block';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

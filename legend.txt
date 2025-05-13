@@ -1,0 +1,3 @@
+1) Write a program in c# sharp to display the multiplication table vertically from 1 to n.
+2) Write a c# program to calculate area of square, rectangle and circle using method overloading.
+3) Create an ASP.NET application to design a master page and web pages for your institute 

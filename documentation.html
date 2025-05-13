@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Documentation - CREAMY WORLD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3 {
+            color: #ff007f;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff007f;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .diagram {
+            max-width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .diagram img {
+            max-width: 100%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .module {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ff007f;
+        }
+        
+        .use-case {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .use-case-left {
+            width: 30%;
+            font-weight: bold;
+        }
+        
+        .use-case-right {
+            width: 70%;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        .note {
+            background: #fff8dc;
+            padding: 10px;
+            border-left: 4px solid #ffeb3b;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CREAMY WORLD - System Documentation</h1>
+    
+    <div class="section">
+        <h2>A) Introduction to System</h2>
+        <p>The Creamy World website is a comprehensive e-commerce platform designed for a cake shop business. The system enables customers to browse various cake products, place orders, track deliveries, and provide feedback, while giving the business owner tools to manage products, orders, and customer interactions.</p>
+        
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Responsive design for optimal viewing on all devices</li>
+            <li>Product categorization (Wedding Cakes, Birthday Cakes, Pancakes, Pastries)</li>
+            <li>Shopping cart and checkout functionality</li>
+            <li>Order tracking system</li>
+            <li>Customer feedback mechanism</li>
+            <li>User account management</li>
+            <li>Real-time search functionality</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>B) Existing System</h2>
+        <p>The existing Creamy World system is a web-based application built using HTML, CSS, and JavaScript. It follows a client-side architecture where most functionality is implemented through browser-based JavaScript.</p>
+        
+        <h3>Technical Stack:</h3>
+        <ul>
+            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+            <li><strong>CSS Framework:</strong> Custom CSS with responsive design principles</li>
+            <li><strong>Icons:</strong> Font Awesome 6.4.0</li>
+            <li><strong>Data Storage:</strong> Browser localStorage for cart and user preferences</li>
+            <li><strong>Deployment:</strong> Static web hosting</li>
+        </ul>
+        
+        <h3>File Structure:</h3>
+        <ul>
+            <li><code>index.html</code> - Entry point with redirect to home page</li>
+            <li><code>home.html</code> - Main landing page</li>
+            <li><code>about.html</code> - About the company</li>
+            <li><code>pan.html</code>, <code>pest.html</code>, <code>birth.html</code>, <code>wedd.html</code> - Product category pages</li>
+            <li><code>contact.html</code> - Contact information and form</li>
+            <li><code>feed.html</code> - Customer feedback form</li>
+            <li><code>login.html</code> - User authentication</li>
+            <li><code>order.html</code> - Shopping cart and checkout</li>
+            <li><code>track-order.html</code> - Order tracking interface</li>
+            <li><code>css/styles.css</code> - Global stylesheet</li>
+            <li><code>js/main.js</code> - Core JavaScript functionality</li>
+            <li><code>img/</code> - Directory containing product and UI images</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>C) Organization Chart</h2>
+        <div class="diagram">
+            <pre>
+                                ┌─────────────────────┐
+                                │      Customer       │
+                                └──────────┬──────────┘
+                                           │
+                                           ▼
+                 ┌───────────────────────────────────────────────┐
+                 │                   Website                      │
+                 └───────────┬───────────────┬───────────────────┘
+                             │               │
+         ┌───────────────────┘               └───────────────────┐
+         ▼                                                       ▼
+┌─────────────────────┐                               ┌────────────────────┐
+│  Frontend Interface │                               │  Backend Services  │
+└──────┬─────────────┘                               └──────────┬─────────┘
+       │                                                        │
+       ▼                                                        ▼
+┌────────────────────────────────────┐             ┌───────────────────────────┐
+│ - Product Display                  │             │ - Data Storage (LocalStorage) │
+│ - Shopping Cart                    │             │ - Order Processing         │
+│ - User Account                     │             │ - Order Tracking           │
+│ - Search Functionality             │             │ - User Authentication      │
+│ - Order Tracking Interface         │             │                           │
+└────────────────────────────────────┘             └───────────────────────────┘
+            </pre>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>A) Objectives of System</h2>
+        <ol>
+            <li><strong>Business Objectives:</strong>
+                <ul>
+                    <li>Increase online sales of cake products</li>
+                    <li>Enhance customer engagement and retention</li>
+                    <li>Streamline the order and delivery process</li>
+                    <li>Build a recognizable brand in the bakery market</li>
+                    <li>Collect valuable customer feedback for continuous improvement</li>
+                </ul>
+            </li>
+            <li><strong>Technical Objectives:</strong>
+                <ul>
+                    <li>Create a responsive, user-friendly website</li>
+                    <li>Implement efficient cart and checkout functionality</li>
+                    <li>Develop a reliable order tracking system</li>
+                    <li>Build a secure user authentication mechanism</li>
+                    <li>Enable real-time product search capabilities</li>
+                    <li>Ensure cross-browser and cross-device compatibility</li>
+                </ul>
+            </li>
+            <li><strong>User Experience Objectives:</strong>
+                <ul>
+                    <li>Provide intuitive navigation and product discovery</li>
+                    <li>Create visually appealing product presentations</li>
+                    <li>Implement clear, transparent pricing and ordering</li>
+                    <li>Offer convenient order tracking</li>
+                    <li>Facilitate easy feedback submission</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="section">
+        <h2>C) Modules of the System</h2>
+        
+        <h3>Core Functionality Modules:</h3>
+        
+        <div class="module">
+            <h4>1. Homepage Module</h4>
+            <p>Provides an attractive landing page with featured products, testimonials, and easy navigation to various categories.</p>
+            <ul>
+                <li>Featured cake of the month</li>
+                <li>Category navigation</li>
+                <li>Customer testimonials</li>
+                <li>Quick access to cart and search</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>2. Product Catalog Module</h4>
+            <p>Organizes products into categories with detailed product information.</p>
+            <ul>
+                <li>Category pages (Wedding Cakes, Birthday Cakes, Pancakes, Pastries)</li>
+                <li>Product cards with images, descriptions, and prices</li>
+                <li>Rating system</li>
+                <li>Add to cart functionality</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>3. Shopping Cart Module</h4>
+            <p>Manages the customer's selected items and checkout process.</p>
+            <ul>
+                <li>Add/remove items</li>
+                <li>Update quantities</li>
+                <li>Calculate subtotal, shipping, and total</li>
+                <li>Proceed to checkout</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>4. Order Tracking Module</h4>
+            <p>Allows customers to track the status of their orders.</p>
+            <ul>
+                <li>Order status visualization (Placed, Baking, Ready, On the Way, Delivered)</li>
+                <li>Estimated delivery dates</li>
+                <li>Order details review</li>
+                <li>Animated delivery tracking</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>5. User Account Module</h4>
+            <p>Handles user registration, login, and profile management.</p>
+            <ul>
+                <li>User registration</li>
+                <li>Login/logout functionality</li>
+                <li>Password recovery</li>
+                <li>Social login options</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>6. Search Module</h4>
+            <p>Enables users to search for products across the website.</p>
+            <ul>
+                <li>Real-time search suggestions</li>
+                <li>Filter by category</li>
+                <li>Highlighted search results</li>
+                <li>No results handling with suggestions</li>
+            </ul>
+        </div>
+        
+        <div class="module">
+            <h4>7. Feedback Module</h4>
+            <p>Collects customer feedback and reviews.</p>
+            <ul>
+                <li>Feedback form</li>
+                <li>Rating system</li>
+                <li>Testimonial submission</li>
+                <li>Confirmation messages</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>A) System Diagrams</h2>
+        
+        <h3>Entity Relationship Diagram (ERD):</h3>
+        <div class="diagram">
+            <pre>
++-------------+      +---------------+       +--------------+
+|    USER     |      |     ORDER     |       |   PRODUCT    |
++-------------+      +---------------+       +--------------+
+| UserID (PK) |<-+   | OrderID (PK)  |    +->| ProductID(PK)|
+| Name        |  |   | UserID (FK)   |----+  | Name         |
+| Email       |  +---| OrderDate     |    |  | Description  |
+| Phone       |      | TotalAmount   |    |  | Price        |
+| Password    |      | Status        |    |  | Category     |
+| Address     |      | DeliveryDate  |    |  | Image        |
++-------------+      +---------------+    |  | Rating       |
+                            |             |  +--------------+
+                            |             |
+                            v             |
+                    +----------------+    |
+                    | ORDER_ITEM     |    |
+                    +----------------+    |
+                    | OrderID (FK)   |<---+
+                    | ProductID (FK) |
+                    | Quantity       |
+                    | Price          |
+                    +----------------+
+
+                    +-------------+         +---------------+
+                    |  FEEDBACK   |         |   CATEGORY    |
+                    +-------------+         +---------------+
+                    | FeedbackID  |         | CategoryID    |
+                    | UserID (FK) |         | Name          |
+                    | Rating      |         | Description   |
+                    | Comment     |         | Image         |
+                    | Date        |         +---------------+
+                    +-------------+
+            </pre>
+        </div>
+        
+        <h3>Use Case Diagram:</h3>
+        <div class="diagram">
+            <pre>
+                                  +------------------------------+
+                                  |        Creamy World          |
+                                  +------------------------------+
+                                  |                              |
++-------------+                   |     +------------------+     |
+|             |                   |     |                  |     |
+|             |----> Browse Products -->|  View Products   |     |
+|             |                   |     |                  |     |
+|             |----> Search Products -->|  Search Products |     |
+|             |                   |     |                  |     |
+|             |----> Add to Cart ------>|  Manage Cart     |     |
+|             |                   |     |                  |     |
+|  Customer   |----> Checkout --------->|  Place Order     |     |
+|             |                   |     |                  |     |
+|             |----> Track Order ------>|  Track Delivery  |     |
+|             |                   |     |                  |     |
+|             |----> Login/Register --->|  User Account    |     |
+|             |                   |     |                  |     |
+|             |----> Submit Feedback -->|  Provide Feedback|     |
+|             |                   |     |                  |     |
++-------------+                   |     +------------------+     |
+                                  |                              |
+                                  +------------------------------+
+            </pre>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>A) System Requirements</h2>
+        
+        <h3>Hardware Requirements:</h3>
+        <ul>
+            <li><strong>Client-side:</strong> Any device capable of running a modern web browser</li>
+            <li><strong>Display:</strong> Minimum resolution of 320px width (responsive design supports various screen sizes)</li>
+            <li><strong>Internet connection:</strong> Required for accessing the website</li>
+        </ul>
+        
+        <h3>Software Requirements:</h3>
+        <ul>
+            <li><strong>Web Browser:</strong> Latest versions of Chrome, Firefox, Safari, or Edge</li>
+            <li><strong>JavaScript:</strong> Enabled in browser settings</li>
+            <li><strong>Cookies:</strong> Enabled for cart functionality</li>
+            <li><strong>Local Storage:</strong> Browser support required for saving cart data</li>
+        </ul>
+        
+        <h3>Server Requirements (for deployment):</h3>
+        <ul>
+            <li><strong>Web Server:</strong> Any server capable of serving static files (Apache, Nginx, etc.)</li>
+            <li><strong>Domain and Hosting:</strong> Required for public access</li>
+            <li><strong>SSL Certificate:</strong> Recommended for secure transactions</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>B) User Guidelines</h2>
+        
+        <h3>Customer User Guidelines:</h3>
+        
+        <h4>1. Browsing Products</h4>
+        <ul>
+            <li>Navigate using the menu bar at the top of the page</li>
+            <li>Click on product categories (Wedding Cake, Birthday Cake, etc.) to view specific product types</li>
+            <li>Scroll through product cards to view available items</li>
+            <li>Click on a product card to view more details</li>
+        </ul>
+        
+        <h4>2. Using the Search Feature</h4>
+        <ul>
+            <li>Click on the search icon in the footer</li>
+            <li>Enter at least two characters to see search suggestions</li>
+            <li>Click on a suggestion or press Enter to search</li>
+            <li>Browse search results organized by categories</li>
+            <li>Use the X button to close the search overlay</li>
+        </ul>
+        
+        <h4>3. Shopping Cart Management</h4>
+        <ul>
+            <li>Click "Order Now" or "Add to Cart" on a product to add it to your cart</li>
+            <li>Click the cart icon in the footer to view your cart</li>
+            <li>Adjust quantities using the + and - buttons</li>
+            <li>Remove items using the X button</li>
+            <li>View the order summary with subtotal, shipping, and total</li>
+            <li>Click "Checkout" to complete your order</li>
+        </ul>
+        
+        <h4>4. Order Tracking</h4>
+        <ul>
+            <li>After placing an order, click "Track Order" in the success page</li>
+            <li>Alternatively, click "Track Order" in the navigation menu</li>
+            <li>View the current status of your order with visual progress indicators</li>
+            <li>See estimated delivery date and order details</li>
+            <li>Use "Contact Support" for assistance with your order</li>
+        </ul>
+        
+        <h4>5. Account Management</h4>
+        <ul>
+            <li>Click the user icon to access the login/signup page</li>
+            <li>Register a new account or log in to an existing one</li>
+            <li>Use social login options for quicker access</li>
+            <li>Manage your profile and preferences</li>
+        </ul>
+        
+        <h4>6. Providing Feedback</h4>
+        <ul>
+            <li>Click on "Feedback" in the navigation menu</li>
+            <li>Fill out the form with your information and comments</li>
+            <li>Rate your experience using the star rating system</li>
+            <li>Submit your feedback</li>
+        </ul>
+        
+        <div class="note">
+            <p><strong>Note:</strong> The current system uses browser local storage for cart management. Your cart items will persist between sessions on the same device and browser, but will not be available if you switch devices or clear your browser data.</p>
+        </div>
+    </div>
+</body>
+</html> 
